@@ -36,7 +36,7 @@ programa
 		random = Util.sorteia(menorN, maiorN)
 		escreva("\n O número sortiado foi: ", random)
 
-		se (random < 0) {
+		se (random % 2 == 1) {
 			escreva("\n " + random + " é ímpar")
 		} senao {
 			escreva("\n " + random + " é par")
