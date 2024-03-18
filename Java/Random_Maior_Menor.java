@@ -17,29 +17,29 @@ public class Random_Maior_Menor {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        /*Crie um algoritmo que leia dois números inteiros e realize o sorteio de um número 
-	aleatório. O algoritmo deve validar qual é o menor e o maior número informado pelo 
-	teclado, para que independente da ordem que o usuário digite os números, consiga 
+        /*Crie um algoritmo que leia dois nÃºmeros inteiros e realize o sorteio de um nÃºmero 
+	aleatÃ³rio. O algoritmo deve validar qual Ã© o menor e o maior nÃºmero informado pelo 
+	teclado, para que independente da ordem que o usuÃ¡rio digite os nÃºmeros, consiga 
 	realizar o sorteio.
-	Se o algoritmo gerar um número par, escreva na tela o número gerado e informe que 
-	ele é par. Se o algoritmo gerar um número ímpar, escreva na tela o número gerado e 
-	que ele é um número ímpar.*/
+	Se o algoritmo gerar um nÃºmero par, escreva na tela o nÃºmero gerado e informe que 
+	ele Ã© par. Se o algoritmo gerar um nÃºmero Ã­mpar, escreva na tela o nÃºmero gerado e 
+	que ele Ã© um nÃºmero Ã­mpar.*/
         
         Scanner input = new Scanner(System.in);
         Random aleatorio = new Random();
         int n1, n2, random, maiorN, menorN;
         
-        System.out.println("Informe o primeiro número: ");
+        System.out.println("Informe o primeiro nÃºmero: ");
 	n1 = input.nextInt();
-	System.out.println("Informe o segundo número: ");
+	System.out.println("Informe o segundo nÃºmero: ");
 	n2 = input.nextInt();
 
 	if (n1<n2) {
-            System.out.println("\nO número menor é: " + n1);
-            System.out.println("O número maior é: " + n2);
+            System.out.println("\nO nÃºmero menor Ã©: " + n1);
+            System.out.println("O nÃºmero maior Ã©: " + n2);
         } else {
-            System.out.println("O número menor é: " + n2);
-            System.out.println("O número maior é: " + n1);
+            System.out.println("O nÃºmero menor Ã©: " + n2);
+            System.out.println("O nÃºmero maior Ã©: " + n1);
 	}
         
         if (n1<n2) {
@@ -51,12 +51,12 @@ public class Random_Maior_Menor {
         }
         
         random = aleatorio.nextInt(menorN, maiorN);
-        System.out.println("O número sortiado foi: " + random);
+        System.out.println("O nÃºmero sortiado foi: " + random);
         
-        if (random < 0) {
-            System.out.println(random + " é ímpar");
+        if (random % 2 == 1) {
+            System.out.println(random + " Ã© Ã­mpar");
         } else {
-            System.out.println(random + " é par");
+            System.out.println(random + " Ã© par");
         }
         // TODO code application logic here
     }
